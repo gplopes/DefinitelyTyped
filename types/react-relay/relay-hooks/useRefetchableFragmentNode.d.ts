@@ -1,4 +1,5 @@
 import {
+    CacheConfig,
     Disposable,
     FetchPolicy,
     IEnvironment,
@@ -61,6 +62,7 @@ export interface ReturnTypeNode<TQuery extends OperationType, TKey extends KeyTy
 
 export interface Options {
     fetchPolicy?: FetchPolicy | undefined;
+    cacheConfig?: CacheConfig | undefined;
     onComplete?: ((arg: Error | null) => void) | undefined;
     UNSTABLE_renderPolicy?: RenderPolicy | undefined;
 }

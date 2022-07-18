@@ -1,4 +1,5 @@
 import {
+    CacheConfig,
     ConcreteRequest,
     Disposable,
     DisposeFn,
@@ -16,6 +17,7 @@ export type LoadMoreFn<TQuery extends OperationType> = (
     count: number,
     options?: {
         onComplete?: ((arg: Error | null) => void) | undefined;
+        cacheConfig?: CacheConfig | undefined;
         UNSTABLE_extraVariables?: Partial<VariablesOf<TQuery>> | undefined;
     },
 ) => Disposable;
